@@ -12,3 +12,66 @@
 # Latihan
 
 ## Praktikum - Basic Programming
+
+ 1. Prioritas 1 - Menghitung Luas Permukaan Trapesium
+    - Source code
+    
+    ![Prioritas 1 Source](/05_Basic%20Programming/screenshots/1_Luas-Trapesium_Code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/05_Basic%20Programming/screenshots/1_Luas-Trapesium_Test.png)
+ 
+ 2. Prioritas 1 - Menentukan Bilangan Ganjil Atau Genap
+    - Source code
+    
+    ![Problem 1 Source](/05_Basic%20Programming/screenshots/2_Ganjil-or-Genap_Code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/05_Basic%20Programming/screenshots/2_Ganjil-or-Genap_Test.png)
+ 
+ 3. Prioritas 1 - Grade Dari Suatu Nilai
+    - Source code
+    
+    ![Prioritas 1 Source](/05_Basic%20Programming/screenshots/3_Grade-sebuah-nilai_Code.png)
+    
+    - Test 
+    
+    ![Problem 2 Test](/05_Basic%20Programming/screenshots/3_Grade-sebuah-nilai_Test.png)
+ 
+ 4. Prioritas 1 - Mencetak Angka 1-100
+    - Source code
+    
+    ![Prioritas 1 Source](/05_Basic%20Programming/screenshots/4_Mencetak-angka_Code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/05_Basic%20Programming/screenshots/4_Mencetak-angka_Test.png)
+ 5. Prioritas 2 - Segitiga Asterik
+    - Source code
+    
+    ![Prioritas 2 Source](/05_Basic%20Programming/screenshots/5_Segitiga-asterik_Code.png)
+    
+    - Test 
+    
+    ![Prioritas 2 Test](/05_Basic%20Programming/screenshots/5_Segitiga-asterik_Test.png)
+ 
+ 6. Prioritas 2 - Faktor Dari Suatu Bilangan
+    - Source code
+    
+    ![Prioritas 2 Source](/05_Basic%20Programming/screenshots/6_Faktor-bilangan_Code.png)
+    
+    - Test 
+    
+    ![Prioritas 2 Test](/05_Basic%20Programming/screenshots/6_Faktor-bilangan_Test.png)
+ 
+ 7. Eksplorasi - Palindrome
+    - Source code
+    
+    ![Eksplorasi Source](/05_Basic%20Programming/screenshots/7_Palindrome_Code.png)
+    
+    - Test 
+    
+    ![Eksplorasi Test](/05_Basic%20Programming/screenshots/7_Palindrome_Test.png)
+ 

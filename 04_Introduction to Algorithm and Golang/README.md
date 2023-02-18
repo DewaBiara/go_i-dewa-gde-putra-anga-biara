@@ -8,3 +8,16 @@
 * Algoritma memiliki karakteristik seperti memiliki batas (awal dan akhir), setiap instruksi didefinisikan dengan jelas, dan *efektif & efisien*. Algoritma memiliki 3 konsep utama yang menjadi dasar dalam pengembangannya, **Sequential** yang berarti konsep berurutan, **Branching** yang berarti konsep percabangan, dan **Looping** yang berarti konsep perulangan.
 
 * Algoritma dapat dituangkan dalam bentuk **Pseudocode** dan **Flowchart**. Pseudocode atau dalam bahasa Indonesia berarti kode semu merupakan algoritma yang dituliskan dalam bentuk tulisan yang jelas dan dapat dipahami oleh siapapun (tidak terpaku pada suatu bahasa pemrograman tertentu). Kemudian flowchart merupakan bagan atau diagram yang memiliki alur yang menggambarkan sebuah algoritma yang dimana flowchart memiliki bentuk-bentuk yang sudah disepakati secara Internasional, sehingga flowchart dapat menggambarkan algoritma yang dapat dipahami oleh semua programmer.
+
+# Latihan
+
+## Praktikum – Introduction to Algorithm and Golang
+
+ 1. Problem 1 - Bilangan Prima
+   ![Bilangan Prima](/04_Introduction%20to%20Algorithm%20and%20Golang/screenshots/Problem%2001_Bilangan-Prima.png)
+
+ 2. Problem 2 - Bilangan Kelipatan 7
+   ![Bilangan Kelipatan 7](/04_Introduction%20to%20Algorithm%20and%20Golang/screenshots/Problem%2002_Bilangan-Kelipatan-7.png)
+
+ 3. Problem 3 - Menghitung Luas Trapesium
+   ![Menghitung Luas Trapesium](/04_Introduction%20to%20Algorithm%20and%20Golang/screenshots/Problem%2003_Menghitung-Luas-Trapesium.png)
