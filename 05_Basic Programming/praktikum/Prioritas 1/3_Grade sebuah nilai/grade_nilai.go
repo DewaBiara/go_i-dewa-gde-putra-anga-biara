@@ -11,7 +11,7 @@ func main() {
 	fmt.Printf(" Masukan Nilai Siswa : ")
 	fmt.Scanf("%d\n", &score)
 
-	fmt.Println("------------------------------")
+	fmt.Println("==============================")
 	fmt.Println(" Nama Siswa  :", name)
 	fmt.Print(" Nilai Siswa : ")
 	if score > 100 || score < 0 {
@@ -32,5 +32,5 @@ func main() {
 		fmt.Print("E")
 	}
 
-	fmt.Println("\n------------------------------")
+	fmt.Println("\n==============================")
 }

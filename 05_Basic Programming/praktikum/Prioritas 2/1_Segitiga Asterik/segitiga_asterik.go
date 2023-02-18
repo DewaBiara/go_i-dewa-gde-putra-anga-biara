@@ -7,7 +7,6 @@ func segitiga_asterik(n int) {
 		for j := n; j >= i; j-- {
 			fmt.Print(" ")
 		}
-
 		for j := 1; j <= i; j++ {
 			fmt.Print("* ")
 		}
