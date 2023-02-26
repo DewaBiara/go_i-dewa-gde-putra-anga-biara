@@ -14,3 +14,21 @@
 # Latihan
 
 ## Praktikum – Time Complexity & Space Complexity
+
+1. Menentukan bilangan prima
+    - Source code
+    
+    ![Prioritas 1 Source](/07_Time%20Complexity%20%26%20Space%20Complexity/screenshots/bilangan_prima_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/07_Time%20Complexity%20%26%20Space%20Complexity/screenshots/bilangan_prima_test.png)
+
+1. Melakukan perpangkatan
+    - Source code
+    
+    ![Prioritas 1 Source](/07_Time%20Complexity%20%26%20Space%20Complexity/screenshots/perpangkatan_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/07_Time%20Complexity%20%26%20Space%20Complexity/screenshots/perpangkatan_test.png)

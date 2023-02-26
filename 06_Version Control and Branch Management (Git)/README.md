@@ -14,3 +14,43 @@
 # Latihan
 
 ## Praktikum – Version Control and Branch Management (Git)
+
+1. Prioritas 1 - Membuat sebuah repository github
+    - Sceenshot
+    
+    ![Prioritas 1 Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/membuat_repository.png)
+
+2. Prioritas 1 - Membuat folder
+    - Sceenshot
+    
+    ![Prioritas 1 Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/membuat_folder.png)
+
+3. Prioritas 1 - Melakukan commit
+    - Sceenshot
+    
+    ![Prioritas 1 Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/melakukan_commit.png)
+
+4. Prioritas 2 - Membuat sebuah branch baru
+    - Sceenshot
+    
+    ![Prioritas 2 Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/membuat_branch.png)
+
+5. Prioritas 2 - Melakukan pull request
+    - Sceenshot
+    
+    ![Prioritas 2 Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/pull_request.png)
+
+6. Eksplorasi - Melakukan workflow sederhana
+    - Sceenshot
+    
+    ![Eksplorasi Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/git_flow.png)
+
+7. Eksplorasi - Melakukan management conflict
+    - Sceenshot
+    
+    ![Eksplorasi Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/management_conflict.png)
+
+8. Eksplorasi - Melakukan code review
+    - Sceenshot
+    
+    ![Eksplorasi Source](/06_Version%20Control%20and%20Branch%20Management%20(Git)/screenshots/code_review.png)
