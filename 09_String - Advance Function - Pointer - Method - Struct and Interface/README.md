@@ -14,3 +14,57 @@
 # Latihan
 
 ## Praktikum – String - Advance Function - Pointer - Method - Struct and Interface
+
+1. Prioritas 1 - Menghitung Jarak Tempuh
+    - Source code
+    
+    ![Prioritas 1 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menghitung-Jarak-Tempuh_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menghitung-Jarak-Tempuh_test.png)
+
+2. Prioritas 1 - Skor Rata Rata
+    - Source code
+    
+    ![Prioritas 1 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Skor-Rata-Rata_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Skor-Rata-Rata_test.png)
+
+3. Prioritas 1 - Menentukan Substring Sama
+    - Source code
+    
+    ![Prioritas 1 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menentukan-Substring-Sama_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menentukan-Substring-Sama_test.png)
+
+4. Prioritas 1 - Menentukan Nilai Maksimum Minimum
+    - Source code
+    
+    ![Prioritas 1 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menentukan-Nilai-Maksimum-Minimum_code.png)
+    
+    - Test 
+    
+    ![Prioritas 1 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas1_Menentukan-Nilai-Maksimum-Minimum_test.png)
+
+5. Prioritas 2 - Caesar Cipher
+    - Source code
+    
+    ![Prioritas 2 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas2_Caesar-Cipher_code.png)
+    
+    - Test 
+    
+    ![Prioritas 2 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Prioritas2_Caesar-Cipher_test.png)
+
+6. Eksplorasi - Substitution Cipher
+    - Source code
+    
+    ![Prioritas 2 Source](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Eksplorasi_Substitution-Cipher_code.png)
+    
+    - Test 
+    
+    ![Prioritas 2 Test](/09_String%20-%20Advance%20Function%20-%20Pointer%20-%20Method%20-%20Struct%20and%20Interface/screenshots/Eksplorasi_Substitution-Cipher_test.png)
