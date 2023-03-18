@@ -19,7 +19,7 @@
 
   - ERD Screenshot
 
-  ![ERD](/12_Database%20-%20DDL%20-%20DML/screenshots/ERD_Digital%20Outlet%20Pulsa.jpg)
+  ![ERD](/14_Database%20-%20DDL%20-%20DML/praktikum/ERD.drawio.png)
 
 - Part 2 - Data Definition Language
   1. Create database alta_online_shop
