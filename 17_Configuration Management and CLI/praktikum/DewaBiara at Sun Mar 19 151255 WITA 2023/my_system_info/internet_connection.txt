@@ -1,0 +1,7 @@
+PING google.com (74.125.24.138) 56(84) bytes of data.
+64 bytes from sf-in-f138.1e100.net (74.125.24.138): icmp_seq=1 ttl=104 time=37.1 ms
+64 bytes from sf-in-f138.1e100.net (74.125.24.138): icmp_seq=2 ttl=104 time=37.0 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 2 received, 33.3333% packet loss, time 2002ms
+rtt min/avg/max/mdev = 36.958/37.017/37.076/0.059 ms
