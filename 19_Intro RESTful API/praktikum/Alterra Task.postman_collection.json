@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "982493ce-89a6-4403-8a3b-380de9db804f",
+		"name": "Alterra Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24555445"
+	},
+	"item": [
+		{
+			"name": "Get Data",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{NewsAPIKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Api-Key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jsonplaceholder_BaseURL}}/posts",
+					"host": [
+						"{{jsonplaceholder_BaseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data ID 3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{NewsAPIKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Api-Key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{jsonplaceholder_BaseURL}}/posts?id=3",
+					"host": [
+						"{{jsonplaceholder_BaseURL}}"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Data",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{NewsAPIKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Api-Key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"userId\": 11,\r\n        \"title\": \"at nam consequatur ea labore ea harum\",\r\n        \"body\": \"cupiditate quo est a modi nesciunt soluta\\nipsa voluptas error itaque dicta in\\nautem qui minus magnam et distinctio eum\\naccusamus ratione error aut\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jsonplaceholder_BaseURL}}/posts",
+					"host": [
+						"{{jsonplaceholder_BaseURL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Data",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "{{NewsAPIKey}}",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "X-Api-Key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{jsonplaceholder_BaseURL}}/posts/101",
+					"host": [
+						"{{jsonplaceholder_BaseURL}}"
+					],
+					"path": [
+						"posts",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[RentABook] Get Client by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{RentABook_BaseURL}}/client/1",
+					"host": [
+						"{{RentABook_BaseURL}}"
+					],
+					"path": [
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[RentABook] Get All Client",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{RentABook_BaseURL}}/client/",
+					"host": [
+						"{{RentABook_BaseURL}}"
+					],
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[RentABook] Add New Client",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 14045,\r\n  \"client_key\": \"CLIENT14045\",\r\n  \"client_secret\": \"SECRET14045\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RentABook_BaseURL}}/client/",
+					"host": [
+						"{{RentABook_BaseURL}}"
+					],
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[RentABook] Update Client by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client_id\": 14045,\r\n  \"client_key\": \"NEWCLIENT01\",\r\n  \"client_secret\": \"NEWSECRET01\",\r\n  \"status\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{RentABook_BaseURL}}/client/1",
+					"host": [
+						"{{RentABook_BaseURL}}"
+					],
+					"path": [
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "[RentABook] Delete Client by ID",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{RentABook_BaseURL}}/client/1",
+					"host": [
+						"{{RentABook_BaseURL}}"
+					],
+					"path": [
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
