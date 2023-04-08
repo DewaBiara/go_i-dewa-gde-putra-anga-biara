@@ -1,65 +1,234 @@
-# **Intro RESTful API**
+# **ORM and Code Structure (MVC)**
 ## Oleh: I Dewa Gde Putra Anga Biara
 
 # Resume
 
-* **API** merupakan singkatan dari `Application Programming Interface` yang merujuk pada kumpulan fungsi atau prosedur yang memungkinkan pengguna untuk mengakses fitur atau data dari sistem operasi, aplikasi, atau layanan tertentu. Cara kerja API dapat diilustrasikan seperti memesan makanan di restoran, di mana pelanggan (client) melakukan permintaan melalui pelayan (API), yang kemudian mengirimkan permintaan tersebut ke dapur (server) untuk diproses. Setelah selesai, dapur akan mengirimkan makanan (data) yang diminta kembali ke pelayan untuk disajikan kepada pelanggan sebagai respons. Salah satu jenis API yang umum digunakan adalah REST atau RESTful API.
+* **MVC (Model-View-Controller)** adalah sebuah pola dalam pengembangan perangkat lunak yang memisahkan atau membagi struktur code menjadi tiga bagian utama yaitu Model, View, dan Controller. `Model` merupakan bagian dari MVC yang bertanggung jawab dalam pengaturan, manipulasi, penyimpanan dan pengorganisasian data yang berhubungan dengan database. `View` merupakan bagian dari MVC yang bertanggung jawab dalam menampilkan data atau informasi dalam format tertentu untuk user. Sedangkan `Controller` merupakan bagian dari MVC yang berfungsi menghubungkan dan mengatur Model dan View agar dapat berinteraksi satu sama lain. Selain itu, Controller juga berisi logika bisnis dari aplikasi atau sistem yang dibuat untuk mengolah data.
 
-* **REST** adalah singkatan dari `Representational State Transfer` dan merupakan suatu arsitektur perangkat lunak yang mengatur cara kerja API. Awalnya REST diciptakan sebagai panduan dalam mengatur komunikasi pada jaringan yang kompleks seperti internet. REST API menggunakan protokol HTTP sebagai cara komunikasi, yang seringkali melalui web browser. Selain itu, interface API biasanya berupa URL, path, atau endpoint yang dirancang agar mudah dimengerti dan digunakan ketika menggunakan API. Selanjutnya, dalam melakukan request di HTTP, terdapat berbagai jenis method seperti GET, POST, PUT, DELETE, dan lain-lain. Setelah melakukan request, API akan memberikan respons atau tanggapan dari request tersebut yang biasanya memiliki format sendiri seperti XML, SOAP, dan JSON yang merupakan format yang paling sering digunakan.
+* **ORM** atau *Objec Relationship Mapping* adalah teknik atau metode yang digunakan untuk menghubungkan antara tabel dalam database relational dengan object dalam pemrograman. Tujuan dari penggunaan ORM adalah untuk mempermudah proses query database yang seringkali membutuhkan waktu yang lama. Dengan ORM, developer dapat melakukan query dari object yang sudah dibuat, sehingga lebih efisien dalam mengakses data dalam database. Untuk membuat atau melakukan perubahan pada tabel dalam database, developer dapat menggunakan fitur `migration`. Dengan fitur ini, developer dapat melihat history tabel yang sudah dibuat dan dimodifikasi, sehingga memudahkan dalam manajemen tabel dalam database. Di bahasa pemrograman Golang, terdapat library ORM yang sangat populer dan sering digunakan, yaitu [gorm.io](https://gorm.io/).
 
-* **JSON** adalah format data yang digunakan untuk menyimpan atau mentransfer data dan singkatan dari `JavaScript Object Notation`. JSON memiliki kelebihan ukurannya yang lebih ringan dan struktur kodenya yang sederhana dan mudah dipahami. Dalam syntax JSON terdiri dari `key` dan `value`, dan terdapat enam jenis data yang dapat digunakan yaitu `Object, String, Array, Boolean, Number, dan NULL`. Dalam respons API saat ini, format JSON merupakan yang paling banyak digunakan karena ringan, sederhana, mudah diolah, dan memiliki format yang jelas dan mudah dipahami.
+* **Gorm.io** adalah sebuah library ORM yang dapat digunakan dalam pengembangan aplikasi dengan bahasa pemrograman Golang. Library ini menyediakan fitur lengkap ORM seperti CRUD, relasi antar tabel, auto migration, dan lain-lain. Selain itu, Gorm juga menyediakan berbagai jenis database dan konfigurasi koneksi yang berbeda-beda. Untuk menginstal Gorm, pengguna dapat menggunakan perintah `go get -u gorm.io/gorm` dan diperlukan driver dari tipe database yang digunakan, yang dapat diinstal dengan perintah `go get -u gorm.io/driver/nama-database`. Gorm sangat populer dan banyak digunakan dalam pengembangan aplikasi dengan Golang yang membutuhkan implementasi ORM.
 
  ---
 
+
 # Latihan
+## Praktikum - ORM and Code Structure (MVC)
 
-## Praktikum – Intro RESTful API
+-   Problem 1 - API CRUD User Using Database
 
-  - **Environment Variable**
-    
-    ![env](/19_Intro%20RESTful%20API/screenshots/Environment.png)
-    
-    > Exported Postman environment variable can be found [here](/19_Intro%20RESTful%20API/praktikum/Alterra%20Test.postman_environment.json)
+    Full code can be found [here](/21_ORM%20%26%20Code%20Structure%20(MVC)/praktikum/01_API-CRUD-User/main.go)
 
-  - **API Request**
-    
-    > Exported Postman collection can be found [here](/19_Intro%20RESTful%20API/praktikum/Alterra%20Task.postman_collection.json)
-    1. JsonPlaceHolder API
+    1. Get single user by id
 
-       - [JsonPlaceHolder] Get All Data
-         
-         ![JsonPlaceHolder](/19_Intro%20RESTful%20API/screenshots/Get%20data%20API.png)
+        - Code
 
-       - [JsonPlaceHolder] Get Data by ID 3
-         
-         ![JsonPlaceHolder](/19_Intro%20RESTful%20API/screenshots/Get%20data%20ID%203.png)
+        ```go
+           // Get user by id
+           func GetUserController(c echo.Context) error {
+               id, err := strconv.Atoi(c.Param("id"))
+               if err != nil {
+                   return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+               }
 
-       - [JsonPlaceHolder] Add New Data
-         
-         ![JsonPlaceHolder](/19_Intro%20RESTful%20API/screenshots/Post%20Data.png)
+               var user User
+               if err := DB.First(&user, id).Error; err != nil {
+                   if err == gorm.ErrRecordNotFound {
+                       return echo.NewHTTPError(http.StatusNotFound, "user not found")
+                   }
 
-       - [JsonPlaceHolder] Delete Data by ID
-         
-         ![JsonPlaceHolder](/19_Intro%20RESTful%20API/screenshots/Delete%20Data.png)
+                   return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+               }
 
-    2. RentABook API
+               return c.JSON(http.StatusOK, map[string]interface{}{
+                   "message": "success get user by id",
+                   "user":    user,
+               })
+           }
+        ```
 
-       - [RentABook] Get Client by ID
-         
-         ![RentABook](/19_Intro%20RESTful%20API/screenshots/RentABook_Get%20Client%20By%20ID.png)
+        - Api Test
 
-       - [RentABook] Get All Client
-         
-         ![RentABook](/19_Intro%20RESTful%20API/screenshots/RentABook_Get%20All%20Client.png)
+            - Success
 
-       - [RentABook] Add New Client
-         
-         ![RentABook](/19_Intro%20RESTful%20API/screenshots/RentABook_Add%20New%20Client.png)
+                ![image](./screenshots/1_Get%20all%20users.png)
 
-       - [RentABook] Update Client by ID
-         
-         ![RentABook](/19_Intro%20RESTful%20API/screenshots/RentABook_Update%20Client%20by%20ID.png)
+    2. Delete user by id
 
-       - [RentABook] Delete Client by ID
-         
-         ![RentABook](/19_Intro%20RESTful%20API/screenshots/RentABook_Delete%20Client%20by%20ID.png)
+        - Code
+
+        ```go
+           // Delete user by id
+           func DeleteUserController(c echo.Context) error {
+               id, err := strconv.Atoi(c.Param("id"))
+               if err != nil {
+                   return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+               }
+
+               result := DB.Delete(&User{}, id)
+               if result.Error != nil {
+                   return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+               }
+
+               if result.RowsAffected == 0 {
+                   return echo.NewHTTPError(http.StatusNotFound, "user not found")
+               }
+
+               return c.JSON(http.StatusOK, map[string]interface{}{
+                   "message": "success delete user",
+               })
+           }
+        ```
+
+        - Api Test
+
+            - Success
+
+                ![image](./screenshots/1_Delete%20user.png)
+
+    3. Update user by id
+
+        - Code
+
+            ```go
+                // update user by id
+                func UpdateUserController(c echo.Context) error {
+                    id, err := strconv.Atoi(c.Param("id"))
+                    if err != nil {
+                        return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+                    }
+
+                    user := User{}
+                    c.Bind(&user)
+
+                    result := DB.Model(&User{}).Where("id = ?", id).Updates(user)
+                    if result.Error != nil {
+                        return echo.NewHTTPError(http.StatusBadRequest, err.Error())
+                    }
+
+                    if result.RowsAffected == 0 {
+                        return echo.NewHTTPError(http.StatusNotFound, "user not found")
+                    }
+
+                    return c.JSON(http.StatusOK, map[string]interface{}{
+                        "message": "success update user",
+                        "user":    user,
+                    })
+                }
+            ```
+
+        - Api Test
+
+            - Success
+
+                ![image](./screenshots/1_Put%20user.png)
+
+-   Problem 2 - Structuring Project with Layered Architecture
+
+    Full code can be found [here](./praktikum/02_layered_api)
+
+    -   Code Structure
+
+        ![image](./screenshots/02_Structured%20model.png)
+
+    -   API Endpoint
+
+        -   Part 1 - User routes
+
+            1.  Get single user by id
+
+                -   Success
+
+                    ![image](./screenshots/1_Get%20user%20by%20id.png)
+
+            2.  Create new user
+
+                -   Success
+
+                    ![image](./screenshots/1_Post%20user.png)
+
+            3.  Delete user by id
+
+                -   Success
+
+                    ![image](./screenshots/1_Delete%20user.png)
+
+            4.  Update user information
+
+                -   Success
+
+                    ![image](./screenshots/1_Put%20user.png)
+
+        -   Part 2 - Book routes
+
+            1. Get all book data
+
+                - Success
+
+                    ![image](./screenshots/2_Get%20all%20books.png)
+
+            2. Get single book by id
+
+                - Success
+
+                    ![image](./screenshots/2_Get%20book%20by%20id.png)
+
+            3. Create new book
+
+                - Success
+
+                    ![image](./screenshots/2_Post%20books.png)
+
+            4. Delete book by id
+
+                - Success
+
+                    ![image](./screenshots/2_Delete%20books.png)
+
+            5. Update book information
+
+                - Success
+
+                    ![image](./screenshots/2_Put%20books.png)
+
+-   Problem 3 - Structuring Project with Layered Architecture With Relation
+
+    Full code can be found [here](./praktikum/03_layered_api_blog/)
+
+    -   Code Structure
+
+        ![image](./screenshots/03_Structured%20model.png)
+
+    -   API Endpoint
+
+        -   Blogs Routes
+
+            1. Get all blogs data
+
+                - Success
+
+                    ![image](./screenshots/3_Get%20all%20blogs.png)
+
+            2. Get single blogs by id
+
+                - Success
+
+                    ![image](./screenshots/3_Get%20blogs%20by%20id.png)
+
+            3. Create new blogs
+
+                - Success
+
+                    ![image](./screenshots/3_Post%20blogs.png)
+
+            4. Delete blogs by id
+
+                - Success
+
+                    ![image](./screenshots/3_Delete%20blogs.png)
+
+            5. Update blogs information
+
+                - Success
+
+                    ![image](./screenshots/3_Put%20blogs.png)
