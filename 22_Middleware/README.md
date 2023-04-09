@@ -60,7 +60,7 @@
 
             Screenshot :
 
-            ![no jwt token](/19_Middleware/screenshots/1_No-token.png)
+            ![no jwt token](./screenshot/1_No%20token.png)
 
         -   Invalid JWT Token while accessing secured endpoint
 
@@ -74,7 +74,7 @@
 
             Screenshot :
 
-            ![invalid jwt token](/19_Middleware/screenshots/1_Invalid-token.png)
+            ![invalid jwt token](./screenshot/2_invalid%20jwt.png)
 
     3.  Response
 
