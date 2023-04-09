@@ -34,17 +34,16 @@ func NewUserControllers(e *echo.Echo) {
 	secureGroup.GET("/users/:id", controllers.GetUserController)
 	secureGroup.DELETE("/users/:id", controllers.DeleteUserController)
 	secureGroup.PUT("/users/:id", controllers.UpdateUserController)
+
 }
 
 func NewBookControllers(e *echo.Echo) {
 	secureGroup := e.Group("")
 	secureGroup.Use(middleware.JWT([]byte(config.JWT_SECRET)))
 
-	// No auth
-	e.GET("/books", controllers.GetBooksController)
-	e.GET("/books/:id", controllers.GetBookController)
-
 	// Auth
+	secureGroup.GET("/books", controllers.GetBooksController)
+	secureGroup.GET("/books/:id", controllers.GetBookController)
 	secureGroup.POST("/books", controllers.CreateBookController)
 	secureGroup.DELETE("/books/:id", controllers.DeleteBookController)
 	secureGroup.PUT("/books/:id", controllers.UpdateBookController)
