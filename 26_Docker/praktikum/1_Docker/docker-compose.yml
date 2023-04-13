@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  api:
+    # image: "jwt_auth:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    # environment:
+    #   - DB_USER=root
+    #   - DB_PASS=root
+    #   - DB_HOST=db
+    #   - DB_PORT=3306
+    #   - DB_NAME=layered_api
+    #   - PORT=:8000
+    #   - JWT_SECRET=secret
+    networks:
+      - mysql_default
+
+networks:
+  mysql_default:
+    external: true
