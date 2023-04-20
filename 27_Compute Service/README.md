@@ -3,11 +3,11 @@
 
 # Resume
 
-* **Docker** adalah sebuah layanan yang memungkinkan kita untuk mem-packing dan menjalankan sebuah aplikasi dalam sebuah lingkungan terisolasi yang disebut dengan container. Dalam container ini, aplikasi dapat berjalan dengan aman dan terisolasi dari lingkungan sekitarnya, sehingga kita dapat menjalankan banyak container pada sebuah host dengan aman dan stabil. Hal ini disebabkan oleh kemampuan Docker dalam memberikan isolasi dan keamanan yang memadai.
+* **Deployment** merupakan tindakan untuk menyebarluaskan aplikasi atau produk yang telah dikembangkan oleh para pengembang, dengan tujuan untuk mengubah statusnya dari sementara menjadi permanen. Cara penyebaran dapat berbeda-beda tergantung jenis aplikasinya, seperti aplikasi web dan API yang di-deploy ke server, sementara aplikasi mobile di-deploy ke Play Store atau App Store.
 
-* **Container** adalah teknologi alternatif yang dapat digunakan untuk memvirtualisasi sistem komputer. Dengan menggunakan container, kita dapat mengemas program komputer ke dalam suatu unit standar sehingga semua dependensi dari aplikasi dapat diikutsertakan dalam paket tersebut. Container memungkinkan aplikasi untuk dengan mudah dipindahkan dari satu lingkungan komputasi ke lingkungan komputasi lainnya. Container juga merupakan paket perangkat lunak yang ringan, independen, dan dapat dieksekusi. Paket container mencakup semua yang dibutuhkan untuk menjalankan aplikasi, termasuk kode, runtime, alat sistem, pustaka sistem, dan pengaturan. Selain itu, container juga menawarkan isolasi dan keamanan yang memadai sehingga memungkinkan banyak container dijalankan pada satu host secara bersamaan.
+* Dalam proses deployment, terdapat beberapa jenis strategi seperti Big-Bang Deployment atau yang dikenal juga sebagai Replace Deployment Strategy, Rollout Deployment Strategy, Blue/Green Deployment Strategy, dan Canary Deployment Strategy. Setiap strategi memiliki kelebihan dan kekurangan yang berbeda-beda.
 
-* Docker **image** adalah suatu file yang berfungsi untuk menjalankan kode di dalam sebuah wadah Docker. Image Docker ini berperan sebagai kumpulan instruksi untuk membangun wadah Docker seperti sebuah template. Selain itu, Docker image juga menjadi titik awal dalam menggunakan Docker. Pengertian image Docker dapat diibaratkan seperti snapshot pada lingkungan mesin virtual (VM).
+* Amazon Elastic Compute Cloud (Amazon EC2) adalah sebuah platform komputasi yang sangat luas dan mendalam, dengan lebih dari 500 jenis instans dan pilihan untuk processor, penyimpanan, jaringan, sistem operasi, dan model pembelian terbaru untuk memenuhi kebutuhan beban kerja yang berbeda. Amazon EC2 mendukung processor dari Intel, AMD, dan Arm, serta menjadi satu-satunya platform cloud yang menyediakan instans EC2 Mac on-demand dan jaringan Ethernet 400 Gbps. Amazon EC2 juga bisa menjadi salah satu pilihan untuk melakukan deployment dari project yang telah selesai dibuat.
 
  ---
 
