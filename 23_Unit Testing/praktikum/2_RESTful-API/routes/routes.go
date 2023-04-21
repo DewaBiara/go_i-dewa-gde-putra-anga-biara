@@ -1,9 +1,9 @@
 package routes
 
 import (
-	"github.com/suryaadi44/go-training-restful/config"
-	"github.com/suryaadi44/go-training-restful/controllers"
-	"github.com/suryaadi44/go-training-restful/lib/database"
+	"RESTFUL_API/config"
+	"RESTFUL_API/controllers"
+	"RESTFUL_API/lib/database"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

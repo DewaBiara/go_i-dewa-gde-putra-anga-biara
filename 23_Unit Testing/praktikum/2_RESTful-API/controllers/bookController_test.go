@@ -8,11 +8,12 @@ import (
 	"strconv"
 	"testing"
 
+	"RESTFUL_API/lib/database"
+	"RESTFUL_API/models"
+
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"github.com/suryaadi44/go-training-restful/lib/database"
-	"github.com/suryaadi44/go-training-restful/models"
 	"gorm.io/gorm"
 )
 

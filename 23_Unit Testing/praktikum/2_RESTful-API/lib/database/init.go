@@ -3,8 +3,9 @@ package database
 import (
 	"fmt"
 
-	"github.com/suryaadi44/go-training-restful/config"
-	"github.com/suryaadi44/go-training-restful/models"
+	"RESTFUL_API/config"
+	"RESTFUL_API/models"
+
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

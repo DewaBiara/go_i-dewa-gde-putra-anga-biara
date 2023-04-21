@@ -1,7 +1,7 @@
 package database
 
 import (
-	"github.com/suryaadi44/go-training-restful/models"
+	"RESTFUL_API/models"
 )
 
 type BookService interface {

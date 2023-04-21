@@ -1,8 +1,9 @@
 package database
 
 import (
-	"github.com/suryaadi44/go-training-restful/lib/utils"
-	"github.com/suryaadi44/go-training-restful/models"
+	"RESTFUL_API/lib/utils"
+	"RESTFUL_API/models"
+
 	"gorm.io/gorm"
 )
 

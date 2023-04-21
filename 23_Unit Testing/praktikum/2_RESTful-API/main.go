@@ -1,10 +1,11 @@
 package main
 
 import (
+	"RESTFUL_API/config"
+	"RESTFUL_API/lib/database"
+	"RESTFUL_API/routes"
+
 	"github.com/labstack/echo/v4"
-	"github.com/suryaadi44/go-training-restful/config"
-	"github.com/suryaadi44/go-training-restful/lib/database"
-	"github.com/suryaadi44/go-training-restful/routes"
 )
 
 func main() {

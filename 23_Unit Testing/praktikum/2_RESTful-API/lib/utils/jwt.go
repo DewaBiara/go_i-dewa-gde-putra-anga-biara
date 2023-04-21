@@ -3,9 +3,10 @@ package utils
 import (
 	"time"
 
+	"RESTFUL_API/config"
+	"RESTFUL_API/models"
+
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/suryaadi44/go-training-restful/config"
-	"github.com/suryaadi44/go-training-restful/models"
 )
 
 func GenerateToken(user models.User) (string, error) {
