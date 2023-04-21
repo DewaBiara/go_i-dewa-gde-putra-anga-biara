@@ -184,7 +184,7 @@
 
         ![image](./screenshots/23_cek%20deploy.png)
 
-### Tugas 4
+### Tugas 3
 
 1.  Pointing domain ke IP VM EC2
 
