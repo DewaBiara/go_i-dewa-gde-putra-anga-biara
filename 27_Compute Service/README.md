@@ -183,3 +183,19 @@
     3.  Cek hasil _deploy_
 
         ![image](./screenshots/23_cek%20deploy.png)
+
+### Tugas 4
+
+1.  Pointing domain ke IP VM EC2
+
+    Dapatkan ip public _instance_ EC2
+
+    ![image](./screenshots/26_ip%20public.png)
+
+    Buat _record_ A pada _domain_ yang akan digunakan, pada kasus ini menggunakan DNS _service_ oleh _IdCloudHost_
+
+    ![image](./screenshots/24_point%20ip%20ke%20dns.png)
+
+2.  Deploy dan jalankan aplikasi di live _environment_ AWS.
+
+    ![image](./screenshots/25_test%20dns.png)
